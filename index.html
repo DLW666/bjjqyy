@@ -216,7 +216,7 @@
 		</div>
         		    
         <script>
-			//获取所有病种动态li，将字数过长的拆分并改变样式
+			//获取所有病种动态li，将字数超過9的拆分并改变样式
 			var longName = document.getElementsByClassName('longName');
 			for(var i=0; i<longName.length; i++){
 				if(longName[i].querySelector('a').innerHTML.length >= 9){
@@ -540,7 +540,7 @@
 					effect:"leftLoop", 
 					//autoPage:true,//自动分页
 					autoPlay:true, //自动播放
-					interTime:5000
+					interTime:3000
 				});
 			</script>
 
@@ -667,7 +667,7 @@
 				effect:"leftLoop", 
 				//autoPage:true,//自动分页
 				autoPlay:true, //自动播放
-				interTime:5000
+				interTime:3000
 			});
 		</script>
 
