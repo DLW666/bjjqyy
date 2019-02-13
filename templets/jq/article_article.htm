@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- 字符编码 -->
+		<meta charset="utf-8">
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- 百度禁止转码 -->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=no" />
+		<!-- 标题 -->
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+		<!-- 页面描述内容 -->
+		<meta name="description" content="{dede:field.description  function='html2text(@me)'/}">
+		<!-- 页面关键词 -->
+		<meta name="keywords" content="{dede:field.keywords/}">
+		
+		<link rel="stylesheet" href="/templets/jq/css/article.css">
+		<link rel="stylesheet" href="/templets/jq/css/public.css">
+        <script type="text/javascript" src="/templets/jq/js/jquery-1.8.2.min.js"></script>
+		<script src="/templets/jq/js/TouchSlide.1.1.js"></script>
+        
+
+	</head>
+
+	<body>
+
+		<div class="head">
+			<div class="logo">
+				<img src="/templets/jq/images/head.jpg">
+			</div>
+            <!-- 导航 -->
+            {dede:include filename='public_nav.htm'/}
+			<!-- banner -->
+			<script src="/templets/jq/js/banner.js"></script>
+         </div>
+            
+        
+        <div class="zjtd_article">
+        	<div class="zjtd_art_pos">
+            	{dede:field name='position'/}
+            </div>
+            
+            <div class="pos-con"></div>
+        
+        	<div class="zjtd_article_tit"><span class="tit_icon" id="tit_icon">原创</span>{dede:field.title/}</div>
+           
+            <div class="zjtd_article_intro">
+            	<div><img id="doctor_img" /><div class="threej">三甲</div></div>
+                <div>
+                	<p>
+                    	<span id="zjName" class='jin'>{dede:field.ys /}</span>
+                    	<span id="jobs"></span>
+                    </p>
+                    <p>
+                    	<span>{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</span>
+                        <label><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></label>人已阅读
+                    </p>
+                </div>
+            </div>
+            <script>
+				document.ready = function setContent(){
+					var ljj = ['刘建军','主任医师 研究生导师 教授','/templets/jq/images/article_ljj.jpg'];
+					var lsl = ['李时莲','知名会诊专家 副主任医师 副研究员','/templets/jq/images/article_lsl.jpg'];
+					var dx = ['邓欣','知名专家 北京天坛医院 儿科副主任医师','/templets/jq/images/article_dx.jpg'];
+					var sym = ['桑艳梅','主任医师 硕士生导师 知名会诊专家','/templets/jq/images/article_sym.jpg'];
+					var lz = ['李振','12年儿童康复治疗经验','/templets/jq/images/article_lz.jpg'];
+					
+					var doctors = [ljj,lsl,dx,sym,lz]
+					
+					var name = document.getElementById('zjName');
+					var jobs = document.getElementById('jobs');
+					var doctor_img = document.getElementById('doctor_img');
+					for(var i=0; i<doctors.length; i++){
+						if(name.innerText == doctors[i][0]){
+							jobs.innerText = doctors[i][1];
+							doctor_img.src = doctors[i][2];
+						}
+					}
+				}
+            </script>
+            
+            
+            <div class="zjtd_article_cont">
+            	{dede:field.body/}
+            </div>
+            </div>
+            
+            <!-- 分享 -->
+            <script src="/swt/nativeShare.js"></script>
+            <link rel="stylesheet" href="/swt/nativeShare.css"/>
+            <div id="nativeShare"></div>
+            <script>
+                var config = {
+                    url:'',
+                    title:'',
+                    desc:'',
+                    img:'http://3g.bjjqyy.com/swt/share.jpg',
+                    img_title:'',
+                    from:''
+                };
+                var share_obj = new nativeShare('nativeShare',config);
+            </script>
+
+		<!-- footer -->
+		{dede:include filename='public_footer.htm'/}
+        
+        
+        <script type="text/javascript" src="/templets/jq/js/jquery-1.8.2.min.js"></script>
+        <script>
+        	document.ready = function(){
+				var icon = document.getElementById('tit_icon');
+				console.log(icon.innerText)
+				switch(icon.innerText){
+					case '原创':
+						icon.setAttribute('style','color:#08b0bd;border:1px solid #08b0bd;');
+						break;
+					case '推荐':
+						icon.setAttribute('style','color:#ff9000;border:1px solid #ff9000;');
+						break;
+					case '热点':
+						icon.setAttribute('style','color:red;border:1px solid red;');
+						break;
+				}
+			}
+        </script>
+
+		<!-- 全局调用 -->
+		<script src="/swt/callSwt.js"></script>
+
+	</body>
+
+</html>

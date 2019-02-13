@@ -1,0 +1,89 @@
+
+.yndtAtr_pos{
+	padding: 2% 3%;
+    color: #7e7e7e;
+}
+.yndtAtr_pos a{
+	color: #7e7e7e;
+}
+.pos-list{
+	height:0.4rem;
+	background: -webkit-linear-gradient(#e1e1e1, #fff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#e1e1e1, #fff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#e1e1e1, #fff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#e1e1e1, #fff); /* 标准的语法（必须放在最后） */
+}
+.yndtAtr_head{
+	padding: 3% 3% 4% 3%;
+	border-bottom: 1px dashed #adadad;
+}
+.yndtAtr_head h2{
+	color: #ddb32b;
+    text-align: center;
+    line-height: 2.2rem;
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+.yndtAtr_intro span:nth-child(2) img{
+	width: 4%;
+    display: inline;
+    vertical-align: middle;
+}
+.yndtAtr_intro{
+	color:#adadad;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.yndtAtr_intro span{
+	margin-right:2.5%;
+}
+.yndtAtr_a{
+    display: flex;
+    justify-content: space-around;
+    padding: 4% 0;
+}
+.yndtAtr_a p{
+	color:#fff;
+}
+.yndtAtr_a a{
+    display: flex;
+    width: 31%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3% 2%;
+    box-sizing: border-box;
+	box-shadow: -0.1rem 0.1rem 0.1rem #888888;
+}
+.yndtAtr_a a:active{
+	box-shadow: -0.1rem 0.1rem 0.1rem #888888 inset;
+}
+.yndtAtr_a a img{
+    width: 20%;
+}
+.yndtAtr_a a:nth-child(1){
+	background:#2997c2;
+}
+.yndtAtr_a a:nth-child(2){
+	background:#ff5260;
+}
+.yndtAtr_a a:nth-child(3){
+	background:#21b5c3;
+}
+.yndtAtr_cont{
+	padding: 0 3% 5% 3%;
+}
+.yndtAtr_cont div{
+    color: #555555;
+    text-align: justify;
+	font-size: 1.1rem;
+    line-height: 2rem;
+    text-indent: 2em;
+    margin-bottom: 3%;
+}
+
+.tit_icon{
+	font-size: 0.9rem;
+    border-radius: 0.3rem;
+    padding: 0.5% 1%;
+    margin-right: 2%;
+}

@@ -1,0 +1,10 @@
+<?php
+$z[0]=Array("title","",70,84);
+$z[0][4]=array();
+$z[1]=Array("description","",177,245);
+$z[1][4]=array();
+$z[1][4]['function']="cn_substr(Html2text(\"@me\").\"...\",30)";
+$z[2]=Array("shorttitle","",251,270);
+$z[2][4]=array();
+
+?>

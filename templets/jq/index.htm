@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- 字符编码 -->
+		<meta charset="utf-8">
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- 百度禁止转码 -->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=no" />
+		<!-- 标题 -->
+		<title>北京金桥医院儿童康复中心</title>
+		<!-- 页面描述内容 -->
+		<meta name="description" content="">
+		<!-- 页面关键词 -->
+		<meta name="keywords" content="">
+        
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+
+		<link rel="stylesheet" href="/templets/jq/css/style.css">
+        <link rel="stylesheet" href="/templets/jq/css/public.css">
+        
+        <script type="text/javascript" src="/templets/jq/js/jquery-1.8.2.min.js"></script>
+        <script src="/templets/jq/js/jquery.SuperSlide.2.1.1.js"></script>
+        <script src="/templets/jq/js/TouchSlide.1.1.js"></script>
+        
+	</head>
+
+	<body>
+		<!--<script>
+        $(document).ready(function() {
+            if (window.history && window.history.pushState) {
+                    $(window).on('popstate', function () {
+                    window.history.pushState('forward', null, '#');
+                    window.history.forward(1);
+                    });
+                }
+                    window.history.pushState('forward', null, '#'); //在IE中必须得有这两行
+                    window.history.forward(1);
+        });
+        </script>-->
+
+		<!-- header -->
+		<div class="head">
+			<div class="logo">
+				<img src="/templets/jq/images/head.jpg">
+			</div>
+            
+			<!-- 导航 -->
+			{dede:include filename='public_nav.htm'/}
+			<!-- banner -->
+			<script src="/templets/jq/js/banner.js"></script>
+            
+            
+		</div>
+        
+        <div class="eks_recommend">
+        	<img src="/templets/jq/images/eks_logo.png" />
+            <img src="/templets/jq/images/eks.png" />
+            优选推荐儿童康复医院
+            <img src="/templets/jq/images/may.png" />
+        </div>
+        <div class="eks_gradient"></div>
+
+		<div class="zlfw">
+			<div class="every_tit">
+				<p>诊疗范围</p>
+				<p>SICKNESS</p>
+				<p>快速了解病情  早发现、早治疗、早康复</p>
+			</div>
+			<div class="zlfw_list">
+            
+            	{dede:channelartlist typeid='4,5,6,7,8'}
+				<div class="list">
+					<div class="list_left">
+						{dede:field name='typename'/}
+					</div>
+					<ul class="list_right">
+                    	{dede:channel row="6" }
+						<li class="longName"><a href="[field:typeurl/]">[field:typename/]</a></li>
+                        {/dede:channel}
+					</ul>
+				</div>
+                {/dede:channelartlist}
+                
+			</div>
+			<a class="zlfw_more" href="javascript:void(0)" onclick="openZoosUrl('chatwin');">
+				查看更多
+			</a>
+		</div>
+        		    
+        <script>
+			//获取所有病种动态li，将字数过长的拆分并改变样式
+			var longName = document.getElementsByClassName('longName');
+			for(var i=0; i<longName.length; i++){
+				if(longName[i].querySelector('a').innerHTML.length >= 9){
+					var supName = longName[i].querySelector('a').innerHTML.split('');
+					supName.splice(3,0,'<br>');
+					supName = supName.join('');
+					longName[i].querySelector('a').innerHTML = supName;
+					longName[i].style.lineHeight = '1.1rem';
+				}
+			}
+		</script>
+
+		<img src="/templets/jq/images/zlfw-zjtd.jpg">
+
+		<!-- 专家团队 -->
+		<div class="zjtd">
+			<div class="every_tit zjtd_tit">
+				<p>知名专家团队</p>
+				<p>EXPERT</p>
+				<p>知名专家 强强联手 精益求精</p>
+			</div>
+
+			<div class="zjtd_intro" id="zjtd_intro">
+				<div class="zjtd_bd" id="zjtd_bd">
+					<ul id="zjtd_bd_ul">
+						{dede:channelartlist typeid="2"}
+                        <li>
+                        	{dede:arclist addfields='zhicheng1,zhicheng2,zhicheng3,rongyu1,rongyu2,rongyu3,scly,czsj,ghf,fylx,czhz' channelid='19'}
+							<img src="[field:picname/]">
+							<div class="zjtd_art">
+								<div class="zjtd_upper">
+									<div class="zjtd_names" href="">
+										<div>[field:title /]</div>
+										<div>
+											<p>[field:zhicheng1/]</p>
+											<p>[field:zhicheng2/]</p>
+											<p>[field:zhicheng3/]</p>
+										</div>
+									</div>
+									<div class="zjtd_des">
+										<div><img src="/templets/jq/images/dian.png" />[field:rongyu1 function='cn_substr(@me,43)'/]</div>
+										<div><img src="/templets/jq/images/dian.png" />[field:rongyu2 function='cn_substr(@me,43)'/]</div>
+										<div><img src="/templets/jq/images/dian.png" />[field:rongyu3 function='cn_substr(@me,43)'/]</div>
+                                        
+									</div>
+                                    {/dede:arclist}
+                                    
+									<div class="zjtd_swt">
+                                      	{dede:arclist addfields='ghzx,hdflj' channelid='19'}
+										<a href="[field:hdflj /]">
+											<img src="/templets/jq/images/zjtd_gh.png">
+											[field:ghzx /]
+                                         {/dede:arclist}
+                                       
+										</a>
+                                        
+										<a href="{dede:field name='typeurl'/}">
+											<img src="/templets/jq/images/zjtd_zx.png">
+											了解详情
+                                             {dede:arclist typeid="63"  idlist='125' } <p style="display:none"><script src="[field:phpurl/]/contclick.php?view=yes&aid=[field:id/]&mid=[field:mid/]"type='text/javascript' language="javascript"></script></p>{/dede:arclist}
+										</a>
+									</div>
+                                    
+								</div>
+                                {dede:arclist addfields='zhicheng1,zhicheng2,zhicheng3,rongyu1,rongyu2,rongyu3,scly,czsj,ghf,fylx,czhz' channelid='19'}
+								<div class="zjtd_under">
+									<div>
+										<p>擅长</p>
+										<p>领域</p>
+									</div>
+									<div>
+										[field:scly function='cn_substr(@me,240)' /]
+									</div>
+								</div>
+                                <div class="zjtd_time">
+                                	<div>[field:czhz /]<span>[field:czsj /]</span></div>
+                                    <!--<div>[field:fylx /]<span>[field:ghf /]</span></div>-->
+                                    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin');" style=" display: flex; align-items: center; background: #ff5f6b; border-radius: 5px; color: #fff; line-height: 2rem;width:35%;">
+                                        <img src="/templets/jq/images/zjtd_zx.png" style=" width: 20%; margin: 0 7%;">
+                                        立即预约
+                                    </a>
+                                </div>
+                                
+							</div>
+                            {/dede:arclist}
+						</li>
+                        {/dede:channelartlist}
+					</ul>
+				</div>
+                
+			</div>
+			<script>
+				TouchSlide({ 
+					slideCell:"#zjtd_intro",
+					//titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".zjtd_bd ul", 
+					effect:"leftLoop", 
+					//autoPage:true,//自动分页
+					autoPlay:true, //自动播放
+					interTime:5000
+				});
+			</script>
+
+			<div class="zjtd_end">
+				<img src="/templets/jq/images/xing.png">
+				<span>温馨提示：</span>为保证就诊质量，专家每次出诊，限号十名
+			</div>
+		</div>
+
+		<img src="/templets/jq/images/zjtd-kfal.jpg">
+		
+		<!-- 康复案例 -->
+		<div class="kfal" id="kfal">
+			<div class="every_tit">
+				<p>儿童康复成功案例</p>
+				<p>Successful cases of Child Rehabilitation</p>
+				<p>儿童康复诊疗我们更专业</p>
+			</div>
+            
+            <ul class="kfal_bd_ul">
+            
+                <li><a href="javascript:void(0)" onclick="openZoosUrl('chatwin');">
+                    <div class="kfal_top">
+                        <!--<div>王璐璐</div>-->
+                        <div>早产儿、痉挛型脑瘫</div>
+                    </div>
+                    <div class="kfal_img">
+                        <div class="kfal_img_child">
+                            <img src="/templets/jq/images/kfal_before4.png" />
+                            <p>治疗前</p>
+                        </div>
+                        <div class="kfal_img_child">
+                            <img src="/templets/jq/images/kfal_after4.png" />
+                            <p>治疗后</p>
+                        </div>
+                        <div class="kfal_round">VS</div>
+                    </div>
+                    <ul class="kfal_des">
+                        <li>
+                            <div>主要表现</div>
+                            <div>足尖着地，足底不能踩平，走路时呈剪刀样步态。其步幅小，用足尖行走，不能奔跑。</div>
+                        </li>
+                        <li>
+                            <div>治疗方式</div>
+                            <div>针灸+蜡疗+按摩+手法康复治疗</div>
+                        </li>
+                        <li>
+                            <div>最终结果</div>
+                            <div>通过短时间的治疗，脚底已可以踩地，尖足、剪刀步态消失，步幅正常，小跑、行走恢复正常</div>
+                        </li>
+                    </ul>
+                </a></li>
+                <li><a href="javascript:void(0)" onclick="openZoosUrl('chatwin');">
+                    <div class="kfal_top">
+                        <!--<div>孟鑫宇</div>-->
+                        <div>痉挛型脑瘫，下肢肌张力过高</div>
+                    </div>
+                    <div class="kfal_img">
+                        <div class="kfal_img_child">
+                            <img src="/templets/jq/images/kfal_before3.png" />
+                            <p>治疗前</p>
+                        </div>
+                        <div class="kfal_img_child">
+                            <img src="/templets/jq/images/kfal_after3.png" />
+                            <p>治疗后</p>
+                        </div>
+                        <div class="kfal_round">VS</div>
+                    </div>
+                    <ul class="kfal_des">
+                        <li>
+                            <div>主要表现</div>
+                            <div>轻微尖足，脚底不能着地，由于经常踩脚尖行走导致脚踝轻微变形，伴有流涎症状。</div>
+                        </li>
+                        <li>
+                            <div>治疗方式</div>
+                            <div>针灸+矫正+按摩+运动康复治疗</div>
+                        </li>
+                        <li>
+                            <div>最终结果</div>
+                            <div>经过传统与现代方法结合治疗，尖足和流涎的症状消除，疗效显著，现与正常同龄儿童无异。</div>
+                        </li>
+                    </ul>
+                </a></li>
+                <li><a href="javascript:void(0)" onclick="openZoosUrl('chatwin');">
+                    <div class="kfal_top">
+                        <!--<div>乔一泽</div>-->
+                        <div>早产儿、轻度足外翻</div>
+                    </div>
+                    <div class="kfal_img">
+                        <div class="kfal_img_child">
+                            <img src="/templets/jq/images/kfal_before5.png" />
+                            <p>治疗前</p>
+                        </div>
+                        <div class="kfal_img_child">
+                            <img src="/templets/jq/images/kfal_after5.png" />
+                            <p>治疗后</p>
+                        </div>
+                        <div class="kfal_round">VS</div>
+                    </div>
+                    <ul class="kfal_des">
+                        <li>
+                            <div>主要表现</div>
+                            <div>患儿轻度足外翻，其他一切正常</div>
+                        </li>
+                        <li>
+                            <div>治疗方式</div>
+                            <div>小儿按摩+矫正+手法康复</div>
+                        </li>
+                        <li>
+                            <div>最终结果</div>
+                            <div>在家长和专业康复老师的努力下，短短一个月时间，脚已经矫正复位，恢复正常。</div>
+                        </li>
+                    </ul>
+                </a></li>
+                
+            </ul>
+            
+		</div>
+        <script>
+			TouchSlide({ 
+				slideCell:"#kfal",
+				//titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+				mainCell:"#kfal .kfal_bd_ul", 
+				effect:"leftLoop", 
+				//autoPage:true,//自动分页
+				autoPlay:true, //自动播放
+				interTime:5000
+			});
+		</script>
+
+		<img src="/templets/jq/images/kfal-zyq.jpg">
+
+		<!-- 作业区 -->
+		<div class="zyq">
+			<div class="every_tit zyq_tit">
+				<p><em>500</em> 平米康复训练作业区</p>
+				<p>ENVIRONMENT</p>
+				<p>宽敞明亮的作业区 功能齐全 保障疗效</p>
+			</div>
+			<div class="zyq_img" id="zyq_img">
+				<div class="zyq_bd">
+					<ul>
+						<li><img src="/templets/jq/images/zyq1.jpg"></li>
+						<li><img src="/templets/jq/images/zyq2.jpg"></li>
+                        <li><img src="/templets/jq/images/zyq3.jpg"></li>
+                        <li><img src="/templets/jq/images/zyq4.jpg"></li>
+                        <li><img src="/templets/jq/images/zyq5.jpg"></li>
+                        
+                        <li><img src="/templets/jq/images/zyq7.jpg"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="zyq_des">
+				      宽敞明亮的康复作业区是患儿康复的保障，各个功能训练区域划分更加详细，空气流通和卫生都达到更佳水平，保证疗效的同时避免了孩子交叉感染的可能。我们拥有500平米的康复作业区，涵盖了专家指导室、专家评估室、感觉统合训练室、PT室、OT室、ST室、融合教育室、针灸室、按摩室、理疗室等各个功能室一应齐全，为患儿的康复提供强有力的保障。
+			</div>
+			<script>
+				TouchSlide({ 
+					slideCell:"#zyq_img",
+					//titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".zyq_bd ul", 
+					effect:"leftLoop", 
+					//autoPage:true,//自动分页
+					autoPlay:true, //自动播放
+					interTime:3000
+				});
+			</script>
+		</div>
+
+		<img src="/templets/jq/images/zyq-disease.jpg">
+
+		<!-- 病区 -->
+		<div class="disease">
+			<div class="every_tit disease_tit">
+				<p>干净整洁的病区</p>
+				<p>ENVIRONMENT</p>
+				<p>解决吃住问题 足不出院完成全程诊疗</p>
+			</div>
+			<div class="disease_img" id="disease_img">
+            	<div class="disease_bd">
+                	<ul>
+                        <li><img src="/templets/jq/images/disease2.jpg"></li>
+                        <li><img src="/templets/jq/images/disease3.jpg"></li>
+                        <li><img src="/templets/jq/images/zyq6.jpg"></li>
+                    </ul>
+                </div>
+			</div>
+			<div class="disease_des">
+				      干净整洁的病房大大方便了奔波在外求医租房的家庭，既减轻了经济负担也可以让患儿足不出院就能享受到北京知名儿童康复专家的诊断、治疗、指导和高级康复治疗老师的作业训练等一站式医疗服务。
+			</div>
+		</div>
+        <script>
+			TouchSlide({ 
+					slideCell:"#disease_img",
+					//titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".disease_bd ul", 
+					effect:"leftLoop", 
+					//autoPage:true,//自动分页
+					autoPlay:true, //自动播放
+					interTime:3000
+				});
+		</script>
+
+		<img src="/templets/jq/images/disease-jzdt.jpg">
+
+		<!-- 就诊动态 -->
+		<div class="jzdt">
+			<div class="every_tit jzdt_tit">
+				<p>就诊动态</p>
+				<p>VISITING DYNAMIC</p>
+			</div>
+			<div class="jzdt_slideBox">
+				<div class="jzdt_bd">
+					<ul>
+						<li>
+							<div class="slide_img"><img src="/templets/jq/images/zjdt1.png" /></div>
+							<p  class="slide_art"> <span>[远程门诊]</span>患者李**申请了金桥医院刘建军主任的远程门诊</p>
+							<div class="slide_time"><span class="time"></span>分钟前</div>
+						</li>
+						<li>
+							<div class="slide_img"><img src="/templets/jq/images/zjdt2.png" /></div>
+							<p  class="slide_art"> <span>[远程门诊]</span>患者张**申请了金桥医院桑艳梅主任的远程门诊</p>
+							<div class="slide_time"><span class="time"></span>分钟前</div>
+						</li>
+						<li>
+							<div class="slide_img"><img src="/templets/jq/images/zjdt3.png" /></div>
+							<p  class="slide_art"> <span>[远程门诊]</span>患者刘**申请了金桥医院李时莲主任的远程门诊</p>
+							<div class="slide_time"><span class="time"></span>分钟前</div>
+						</li>
+						<li>
+							<div class="slide_img"><img src="/templets/jq/images/zjdt4.png" /></div>
+							<p  class="slide_art"> <span>[远程门诊]</span>患者王**申请了金桥医院邓欣主任的远程门诊</p>
+							<div class="slide_time"><span class="time"></span>分钟前</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<script>
+				$(".jzdt_slideBox").slide({
+					mainCell:".jzdt_bd ul",autoPlay:true,effect:"topMarquee",vis:3,interTime:15,trigger:"click"
+				});
+
+				var time = document.getElementsByClassName('time');
+				for(var i=0; i<time.length; i++){
+					var randoms = parseInt(Math.random()*8+1);
+					time[i].innerHTML = randoms;
+				}
+			</script> 
+		</div>
+
+		<img src="/templets/jq/images/jzdt-hz.jpg">
+        <style>
+        	
+        </style>
+        <div class="hzjg">
+        	<div class="every_tit hzjg_tit">
+				<p>合作机构</p>
+				<p>COOPERATIVE ORGANIZATION</p>
+			</div>
+            <div class="hzjg_msg">
+            	<div><img src="/templets/jq/images/hz_eks.jpg" /></div>
+                <div><img src="/templets/jq/images/hz_kfyj.jpg" /></div>
+                <div><img src="/templets/jq/images/hz_bkyl.jpg" /></div>
+                <div><img src="/templets/jq/images/hz_fset.jpg" /></div>
+                <div><img src="/templets/jq/images/hz_ttyy.jpg" /></div>
+                <div><img src="/templets/jq/images/hz_xxb.jpg" /></div>
+                <div><img src="/templets/jq/images/hz_qch.jpg" /></div>
+            </div>
+        </div>
+		
+        <img src="/templets/jq/images/hz-footer.jpg">
+
+		<!-- footer -->
+		{dede:include filename='public_footer.htm'/}
+             
+		<!-- 全局调用 -->
+		<script src="/swt/callSwt.js"></script> 
+        
+        <!--
+            {dede:channelartlist typeid='9,11,12,13,14,40,15,16,17,18,19,20,21,22,23,24' }
+            <div class="aaa" style="display:none;">{dede:field name='typename'/}-{dede:field.content/}</div>
+            {/dede:channelartlist}
+            {dede:channelartlist typeid='25,26,27,28,29,30,31,32,33,34,35,36,37,38' }
+            <div class="aaa" style="display:none;">{dede:field name='typename'/}-{dede:field.content/}</div>
+            {/dede:channelartlist}
+            <script>
+                var a = document.getElementsByClassName('aaa');
+                for(var i=0; i<a.length; i++){
+                    console.log(a[i].innerHTML);
+                }
+            </script>
+        -->
+
+	</body>
+
+</html>

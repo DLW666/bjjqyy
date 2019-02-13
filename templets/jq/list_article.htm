@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- 字符编码 -->
+		<meta charset="utf-8">
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- 百度禁止转码 -->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=no" />
+		<!-- 标题 -->
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+		<!-- 页面描述内容 -->
+		<meta name="description" content="{dede:field.description  function='html2text(@me)'/}">
+		<!-- 页面关键词 -->
+		<meta name="keywords" content="{dede:field.keywords/}">
+		
+		<link rel="stylesheet" href="/templets/jq/css/list_article.css">
+		<link rel="stylesheet" href="/templets/jq/css/public.css">
+
+		<script src="/templets/jq/js/TouchSlide.1.1.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="head">
+			<div class="logo">
+				<img src="/templets/jq/images/head.jpg">
+			</div>
+			<!-- 导航 -->
+			{dede:include filename='public_nav.htm'/}
+			<!-- banner -->
+			<script src="/templets/jq/js/banner.js"></script>
+		</div>
+        
+
+		<div class="content">
+        	
+            <div class="content_tit">
+            	<p>{dede:field name="typename" /}</p>
+                <p>{dede:field.seotitle /}</p>
+            </div>
+        
+			<div class="content_disease">
+				<div class="disease_tit">
+                	<div>
+                		<img src="/templets/jq/images/disease_tit.jpg" />
+                        导读
+                    </div>
+                </div>
+				<div class="disease_cont">
+					{dede:field.content1/}
+				</div>
+                <script>
+                	//隐藏页图片
+					document.getElementsByClassName('disease_cont')[0].querySelector('img').style.display = 'none';
+                </script>
+			</div>
+            
+			<div class="content_disease">
+				<div class="disease_tit">
+                	<div>
+                		<img src="/templets/jq/images/disease_res.jpg" />
+                        病因
+                    </div>
+                </div>
+				<div class="disease_cont">
+					{dede:field.content2/}
+				</div>
+			</div>
+			<div class="content_disease">
+				<div class="disease_tit">
+                	<div>
+                		<img src="/templets/jq/images/disease_show.jpg" />
+                        临床表现
+                    </div>
+                </div>
+				<div class="disease_cont">
+					{dede:field.content3/}
+				</div>
+			</div>
+			<div class="content_disease">
+				<div class="disease_tit">
+                	<div>
+                		<img src="/templets/jq/images/disease_check.jpg" />
+                        检查
+                    </div>
+                </div>
+				<div class="disease_cont">
+					{dede:field.content4/}
+				</div>
+			</div>
+			<div class="content_disease">
+				<div class="disease_tit">
+                	<div>
+                		<img src="/templets/jq/images/disease_diag.jpg" />
+                        诊断
+                    </div>
+                </div>
+				<div class="disease_cont">
+					{dede:field.content5/}
+				</div>
+			</div>
+		</div>
+        
+        
+        
+        
+        
+        <!-- 推荐专家 -->
+		<div class="zjtd">
+        
+			<div class="disease_tit" style="margin:0 5%;">
+            	<div>
+                    <img src="/templets/jq/images/disease_doc.jpg" />
+                    推荐专家
+                </div>
+            </div>
+            
+			<div class="zjtd_intro" id="zjtd_intro">
+				<div class="zjtd_bd" id="zjtd_bd">
+					<ul id="zjtd_bd_ul">
+						{dede:channelartlist typeid="2"}
+                        <li><!-- onclick=jumpSwt("{dede:field name='typeurl'/}") -->
+                        	{dede:arclist addfields='zhicheng1,zhicheng2,zhicheng3,rongyu1,rongyu2,rongyu3,scly,czsj,ghf,fylx,czhz' channelid='19'}
+							<img src="[field:picname/]">
+							<div class="zjtd_art">
+								<div class="zjtd_upper">
+									<div class="zjtd_names" href="">
+										<div class="zjtd_tit">[field:title /]</div>
+										<div>
+											<p>[field:zhicheng1 function='cn_substr(@me,16)/]</p>
+											<p>[field:zhicheng2 function='cn_substr(@me,16)/]</p>
+											<p>[field:zhicheng3 function='cn_substr(@me,16)/]</p>
+										</div>
+									</div>
+									<div class="zjtd_des">
+										<div><img src="/templets/jq/images/dian.png" />[field:rongyu1 function='cn_substr(@me,43)'/]</div>
+										<div><img src="/templets/jq/images/dian.png" />[field:rongyu2 function='cn_substr(@me,43)'/]</div>
+										<div><img src="/templets/jq/images/dian.png" />[field:rongyu3 function='cn_substr(@me,43)'/]</div>
+                                        
+									</div>
+                                    {/dede:arclist}
+                                    
+									<div class="zjtd_swt">
+										{dede:arclist addfields='ghzx,hdflj' channelid='19'}
+										<a href="[field:hdflj /]">
+											<img src="/templets/jq/images/zjtd_gh.png">
+											[field:ghzx /]
+										</a>
+                                        {/dede:arclist}
+										<a href="{dede:field name='typeurl'/}">
+											<img src="/templets/jq/images/zjtd_zx.png">
+											了解详情
+										</a>
+									</div>
+                                    
+								</div>
+                                {dede:arclist addfields='zhicheng1,zhicheng2,zhicheng3,rongyu1,rongyu2,rongyu3,scly,czsj,ghf,fylx,czhz' channelid='19'}
+								<div class="zjtd_under">
+									<div>
+										<p>擅长</p>
+										<p>领域</p>
+									</div>
+									<div>
+										[field:scly function='cn_substr(@me,240)' /]
+									</div>
+								</div>
+                                <div class="zjtd_time">
+                                	<div>[field:czhz /]<span>[field:czsj /]</span></div>
+                                    <!--<div>[field:fylx /]<span>[field:ghf /]</span></div>-->
+                                    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin');" style=" display: flex; align-items: center; background: #ff5f6b; border-radius: 5px; color: #fff; line-height: 2rem;width:35%;">
+                                        <img src="/templets/jq/images/zjtd_zx.png" style=" width: 20%; margin: 0 7%;">
+                                        立即预约
+                                    </a>
+                                </div>
+                                
+							</div>
+                            {/dede:arclist}
+						</li>
+                        {/dede:channelartlist}
+                        
+					</ul>
+				</div>
+                
+			</div>
+			<!--<script>
+				TouchSlide({ 
+					slideCell:"#zjtd_intro",
+					//titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".zjtd_bd ul", 
+					effect:"leftLoop", 
+					//autoPage:true,//自动分页
+					autoPlay:true, //自动播放
+					interTime:5000
+				});
+			</script>-->
+            
+            <script>
+				var allDoc = document.getElementById('zjtd_bd_ul').querySelectorAll('li');//医生列表
+				console.log(allDoc)
+				var docName = document.getElementsByClassName('zjtd_tit');//医生标题
+				console.log(docName)
+				var remDoc = '{dede:field.content/}';
+				var remDoc_index = remDoc.lastIndexOf(';');
+				remDoc = remDoc.substring(remDoc_index+1,remDoc.length);//当前页的{dede:field.content/}
+				console.log(remDoc)
+				for(var i=0; i<allDoc.length; i++){
+					if(docName[i].innerText != remDoc){
+						allDoc[i].style.display = 'none';
+					}
+				}
+			</script>
+
+			<div class="zjtd_end">
+				<img src="/templets/jq/images/xing.png">
+				<span>温馨提示：</span>为保证就诊质量，专家每次出诊，限号十名
+			</div>
+		</div>
+
+        
+        
+        
+        
+        
+
+		<!-- footer -->
+		{dede:include filename='public_footer.htm'/}
+
+		<!-- 全局调用 -->
+		<script src="/swt/callSwt.js"></script>
+
+	</body>
+
+</html>

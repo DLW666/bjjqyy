@@ -1,0 +1,270 @@
+
+.logo{
+	width: 100%;
+}
+
+
+.nav{
+	background: #ddb32b;
+	display: flex;
+	text-align: center;
+}
+.nav a{
+	color: #fff;
+}
+.nav li{
+	width: 20%;
+	border-right: 1px solid #fff;
+	font-size: 1rem;
+	line-height: 2.5rem;
+}
+.nav li:last-child{
+	border-right: none;
+}
+
+.content{
+	padding: 0 5%;
+}
+
+.content_tit{
+	text-align: center;
+    padding: 6% 0 0 0;
+}
+.content_tit p:nth-child(1){
+    font-size: 2.1rem;
+    color: #ddb32b;
+    letter-spacing: 0.2rem;
+}
+.content_tit p:nth-child(2){
+	font-size: 0.8rem;
+    color: #9f9f9f;
+}
+
+.content_disease{
+	padding: 3% 0;
+}
+.disease_tit{
+	font-size: 1.2rem;
+	font-weight: bold;
+	line-height: 2.2rem; 
+	color: #ddb32b;
+	margin: 3% 0;
+    border-bottom: 1px solid #8f8f8f;
+}
+.disease_tit div{
+	display: inline;
+    border-bottom: 3px solid;
+    padding: 1% 1%;
+}
+.disease_tit div img{
+	display: inline;
+    width: 1.5rem;
+	vertical-align: middle;
+}
+.disease_cont{
+	text-align: justify;     
+	font-size: 1rem; 
+	line-height: 2rem;
+	text-indent: 2em;
+}
+.disease_cont img{
+	margin-top: 0.5rem;
+}
+
+.footer{
+	background: #06b6be;
+	color: #fff;
+	text-align: center;
+	padding: 5% 0 18% 0;
+	letter-spacing: 0.1rem;
+}
+.footer div:nth-child(1){
+	font-size: 1.7rem;
+	font-weight: bold;
+	letter-spacing: 0.3rem;
+}
+.footer div:nth-child(2){
+	font-size: 0.9rem;
+}
+.footer div:nth-child(3){
+	font-size: 1.1rem;
+	line-height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer div:nth-child(3) img{
+	display: inline;
+	width: 5%;
+	margin-right: 1%;
+}
+.footer div:nth-child(4){
+	font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+.zjtd{
+	padding: 0 0 5% 0;
+	background: #fff;
+}
+.zjtd_tit{
+	color: #2595c1;
+	padding: 5% 0;
+}
+.zjtd_tit p:nth-child(3){
+	color:#82bad5;
+}
+.zjtd_intro{
+	padding-top: 3%;
+	position: relative;
+}
+.zjtd_bd ul li{
+	position: relative;
+	padding-bottom:4rem;
+}
+.zjtd_art{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.zjtd_upper{
+	padding: 0 0 1% 36%;
+}
+.zjtd_names{
+	color:#2595c1;
+	display: flex;
+	align-items: center;
+}
+.zjtd_names div:nth-child(1){
+	padding:0 0 0 0;
+	font-size: 1.3rem;
+	line-height: 4rem;
+	border-right: 2px solid;
+	font-weight: bold;
+	width: 30%;
+}
+.zjtd_names div:nth-child(2){
+	font-size: 1rem;
+	line-height: 1.3rem;
+	padding: 0 0 0 5%;
+	width: 65%;
+}
+.zjtd_des{
+	color: #6e6e6e;
+	font-size: 0.95rem;
+	margin: 4% 0;
+	height: 4.2rem;
+}
+.zjtd_des div{
+	display: flex;
+	align-items: center;
+	line-height: 1.4rem;
+}
+.zjtd_des div img{
+	width: 4%;
+	margin-right: 1%;
+}
+/*.zjtd_des li{
+	list-style: inside url(/templets/jq/images/dian.png);
+}*/
+.zjtd_des li img{
+	display: inline;
+	width: 2%;
+	margin-right: 2%;
+}
+.zjtd_swt{
+	display: flex;
+	justify-content: space-around;
+}
+.zjtd_swt a{
+	color: #fff;
+	width: 43%;
+	display: flex;
+	align-items: center;
+	line-height: 2rem;
+	border-radius: 5px;
+	font-size: 0.95rem;
+}
+.zjtd_swt a:nth-child(1){
+	background: #ff5f6b;
+}
+.zjtd_swt a:nth-child(2){
+	background: #f5bd44;
+}
+.zjtd_swt a img{
+	width: 20%;
+	margin: 0 7%;
+}
+.zjtd_under{
+	display: flex;
+	padding: 0 4% 0 6%;
+	text-align: justify;
+}
+.zjtd_under div:nth-child(1){
+	width: 25%;
+	background: rgba(102,181,211,0.8);
+	padding: 3%;
+	box-sizing: border-box;
+}
+.zjtd_under div:nth-child(2){
+	width: 75%;
+	color: #2495c1;
+	background: rgba(255,255,255,0.6);
+	font-size: 0.9rem;
+	padding: 1% 0 1% 2%;
+	line-height: 1.1rem;
+}
+.zjtd_under div:nth-child(1) p{
+	width: 100%;
+	color: #fff;
+	font-size: 1.3rem;
+	text-align: center;
+	letter-spacing: 0.3rem;
+	line-height: 1.8rem;
+}
+.zjtd_time{
+    padding: 0 3%;
+    margin: 4% 5%;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    color: #fff;
+	line-height: 2.9rem;
+	background:url('/templets/jq/images/zjtd_time.jpg') no-repeat;
+	background-size: 100%;
+	font-size:0.9rem;
+}
+.zjtd_time span{
+	color:#ffd95c;
+}
+
+.zjtd_end{
+	color: #2595c1;
+	width: 90%;
+	border: 1px dashed;
+	margin: auto;
+	margin-top: 5%;
+	border-radius: 5px;
+	font-size: 0.85rem;
+	line-height: 1.7rem;
+	padding: 0 2%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.zjtd_end span{
+	color: #ff5260;
+}
+.zjtd_end img{
+	display: inline;
+	width: 4%;
+	margin-right: 1%;
+}
+
+
+

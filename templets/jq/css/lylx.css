@@ -1,0 +1,53 @@
+
+
+
+.lylx_box{
+	padding:4% 3%;
+}
+
+.lylx_tit{
+    color: #ba992e;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.lylx_cont{
+	padding-top: 5%;
+}
+
+.lylx_cont li{
+	display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.cont_img{
+	width:15%;
+}
+
+.cont_cont{
+	width:83%;
+}
+
+.cont_cont p{
+	font-size: 1rem;
+	text-align: justify;
+	line-height: 1.4rem;
+    margin-bottom: 0.7rem;
+}
+
+.cont_cont .cont_color{
+	color: #ddb32b;
+}
+
+.cont_lyzd{
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    display: block;
+    border: 1px solid #ddb32b;
+    width: 22%;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: #ddb32b;
+}

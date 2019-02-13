@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <!-- 页面描述内容 -->
+    <meta name="description" content="{dede:field.description  function='html2text(@me)'/}">
+    <!-- 页面关键词 -->
+    <meta name="keywords" content="{dede:field.keywords/}">
+    <link rel="stylesheet" type="text/css" href="/templets/jq/css/public.css" />
+    <link rel="stylesheet" type="text/css" href="/templets/jq/css/zjtd.css" />
+    <script type="text/javascript" src="/templets/jq/js/jquery-1.8.2.min.js"></script>
+    <script src="/templets/jq/js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body>
+<div class="header"> 
+
+
+  <div style="text-align:center;"><a href="tel:010-67611721"><img src="/templets/jq/images/top_logo.jpg" width="100%" /></a></div>
+  
+  <div >
+  	<!-- 导航 -->
+	{dede:include filename='public_nav.htm'/}
+  </div>
+</div>
+
+<div class="slide_container">
+    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin');">
+    	<img src="{dede:field name='typeimg' /}" style="width: 100%;" />
+    </a>
+</div>
+
+
+
+<div class="content">
+    <div class="physician">
+    	<h1>{dede:field name="typename" /}</h1>
+        <p class="occupation">
+        	{dede:arclist addfields='zhicheng1,zhicheng2,zhicheng3' channelid='19'}
+            	[field:zhicheng1 /] [field:zhicheng2 /] [field:zhicheng3 /]
+            {/dede:arclist}
+        </p>
+        <div class="satisfied"><p class="l"><span class="bt">疗效：</span><span class="soild"></span><span class="soild"></span><span class="soild"></span><span class="soild"></span><span class="soild"></span>100%满意</p>
+        <p><span class="bt">  态度：</span><span class="soild"></span><span class="soild"></span><span class="soild"></span><span class="soild"></span><span class="soild"></span>100%满意</p></div>
+    </div>
+    <div class="clear"></div>
+    
+    {dede:arclist addfields='scly,zyjl,czsj' channelid='19' orderby='pubdate'}
+    <div class="goodat">
+    	<h1><img src="/templets/jq/images/goddat.jpg" />专业擅长</h1>
+        <p>
+            [field:scly /]
+        </p>
+    </div>
+    <div class="goodat">
+    	<h1><img src="/templets/jq/images/goddat1.jpg" />执业经历</h1>
+        	[field:zyjl /]
+            <p class="time"><img src="/templets/jq/images/time.jpg" />出诊时间：[field:czsj /]</p>
+    	<p class="tips">温馨提示：为保证就诊质量，专家每次出诊，限号十名</p>
+        <div onclick="openZoosUrl('chatwin');">
+        <input name="" value="在线咨询" class="zx gbutton" type="button" /><input name="" value="预约挂号" class="gh gbutton"  type="button" />
+        <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    {/dede:arclist}
+    
+    <!-- 第一个子栏目 -->
+    
+                
+            {dede:channelartlist limit='0,1'}
+            <div class="goodat">
+                <h1><img src="/templets/jq/images/goddat2.jpg" />{dede:field name='typename'/}</h1>
+                
+                <div class="reviewsBox">
+                    <div class="reviewsBd">
+                        <ul>
+                        	{dede:arclist orderby='pubdate'}
+                            <li>
+                                <div class="patientr">
+                                    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin');">
+                                        <dl>
+                                            <dt><img src="/templets/jq/images/partientr.jpg" /></dt>
+                                            <dd><span class="l">[field:title/]</span>	<span class="r">[field:pubdate function='GetDateMK(@me)' /]</span></dd>
+                                            <dd>[field:shorttitle/]</dd>
+                                            <div class="clear"></div>
+                                        </dl>
+                                        <div class="clear"></div>
+                                        <p>患者主观疗效：<b>很满意</b>　　态度：<b>很满意</b> </p>
+                                        <p>[field:description/]</p>
+                                    </a>
+                                </div>
+                            </li>
+                            {/dede:arclist} 
+                        </ul>
+                    </div>
+                </div>
+                                 
+            </div>
+            {/dede:channelartlist}
+    			
+    <script>
+    	$(".reviewsBox").slide({
+			mainCell:".reviewsBd ul",autoPlay:true,effect:"topMarquee",vis:2,interTime:15,trigger:"click"
+		});
+    </script>
+    
+    <!-- 第二个子栏目 -->
+    {dede:channelartlist limit='1,1'}
+    <div class="goodat" id="getSec">
+    	<h1><img src="/templets/jq/images/goddat3.jpg" />{dede:field name='typename'/}</h1>
+        {dede:arclist row='3' orderby='rand' titlelen='18'}
+        <div class="onlinei onlineit">
+        	<div class="btt">
+            	<a href="javascript:void(0)" onclick="openZoosUrl('chatwin');">[field:title/]</a> 
+                <b class="mimi"></b>  
+                <span>共<em class="random1" style="font-style: normal;"></em>条对话 今天</span>
+            </div>
+            <p class="add">[field:description function='cn_substr(Html2text("@me")."...",30)'/]<span>[field:shorttitle/]</span></p>
+            <p class="gray mi_yinsi" style="display:none" >交流涉及隐私，仅医患本人可见</p>
+        </div>
+        {/dede:arclist}
+    </div>
+    {/dede:channelartlist}
+    
+    <!-- 第三个子栏目 -->
+    {dede:channelartlist limit='2,1' }
+    <div class="goodat">
+    	<h1><img src="/templets/jq/images/goddat4.jpg" />{dede:field name='typename'/}</h1>
+        {dede:arclist row='3' orderby='id' titlelen='90'}
+        <div class="expert">
+        	<h4><span>医学科普</span><a href="[field:arcurl/]">[field:title/]</a></h4>
+            <p><span><b class="reviews"></b>条评价 <b><script src="[field:phpurl/]/contclick.php?view=yes&aid=[field:id/]&mid=[field:mid/]"type='text/javascript' language="javascript"></script>  </b>人已读</span> <span class="r">发表于[field:pubdate function='GetDateMK(@me)' /]</span></p>
+        </div>
+        {/dede:arclist}
+    </div>
+    {/dede:channelartlist}
+    
+</div>
+
+<div class="foot">
+	
+ 	<div class="message">
+    	<h1>医师寄语</h1>
+        {dede:arclist addfields='ysjy' channelid='19'}
+        [field:ysjy /]
+        {/dede:arclist}
+    </div>
+    
+    <div class="share">
+    	<p>希望大家转发我的医生名片给有需要的家人和朋友</p>
+		<p>让他们得到及时治疗，早日康复！</p>
+        
+        <!-- 分享 -->
+        <script src="/swt/nativeShare.js"></script>
+    	<link rel="stylesheet" href="/swt/nativeShare.css"/>
+        <div id="nativeShare"></div>
+        <script>
+            var config = {
+                url:'',
+                title:'',
+                desc:'北京金桥医院，是北京市丰台区卫生局批准成立的综合性的、现代化的、中西医结合的综合性医院。承担着综合性医院医疗、教学、科研、预防等任务。医院始终坚持以医疗质量为基础，以医疗安全为前提，以技术创新为主导，以人性化服务为宗旨，以品牌经营为中心的办院方针，为患者健康、幸福的生活保驾护航',
+                img:'http://3g.bjjqyy.com/swt/share.jpg',
+                img_title:'',
+                from:''
+            };
+            var share_obj = new nativeShare('nativeShare',config);
+        </script>
+        
+    </div>
+</div>
+
+<script>
+	window.onload = function randomEvent(){
+		//在线问诊
+		var randoms;
+		var allRandom = document.getElementsByClassName('random1');
+		for(var i=0; i<allRandom.length; i++){
+			randoms = parseInt((Math.random() + 2) * 10);//20-30的随机数
+			allRandom[i].innerHTML = randoms;
+			if(randoms < 25){
+				document.getElementsByClassName('mimi')[i].innerHTML = '名医挂号 ';
+			}else{
+				document.getElementsByClassName('mimi')[i].innerHTML = '密';
+				document.getElementsByClassName('mi_yinsi')[i].style.display = 'block';
+			}
+		}
+		
+		//专家文章
+		var reviews;
+		var allReviews = document.getElementsByClassName('reviews');
+		for(var i=0; i<allReviews.length; i++){
+			reviews = parseInt((Math.random() + 10) * 10); //100-110的随机数
+			allReviews[i].innerHTML = reviews;
+		}
+		
+//		var readys;
+//		var allReadys = document.getElementsByClassName('readys');
+//		for(var i=0; i<allReviews.length; i++){
+//			readys = parseInt((Math.random() + 10) * 100); //100-110的随机数
+//			allReadys[i].innerHTML = readys;
+//		}
+	}
+</script>
+
+<!-- 全局调用 -->
+<script src="/swt/callSwt.js"></script>
+
+</body>
+</html>

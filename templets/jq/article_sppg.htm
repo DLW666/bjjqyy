@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- 字符编码 -->
+		<meta charset="utf-8">
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- 百度禁止转码 -->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=no" />
+		<!-- 标题 -->
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+		<!-- 页面描述内容 -->
+		<meta name="description" content="{dede:field.description  function='html2text(@me)'/}">
+		<!-- 页面关键词 -->
+		<meta name="keywords" content="{dede:field.keywords/}">
+		
+		<link rel="stylesheet" href="/templets/jq/css/article_yndt.css">
+		<link rel="stylesheet" href="/templets/jq/css/public.css">
+		<script src="/templets/jq/js/TouchSlide.1.1.js"></script>
+        
+
+	</head>
+
+	<body>
+
+		<div class="head">
+			<div class="logo">
+				<img src="/templets/jq/images/head.jpg">
+			</div>
+            <!-- 导航 -->
+            {dede:include filename='public_nav.htm'/}
+			<!-- banner -->
+			<script src="/templets/jq/js/banner.js"></script>
+         </div>
+            
+        
+       	<div class="yndtAtr_box">
+        	<div class="yndtAtr_pos">
+            	当前位置：{dede:field name='position'/}
+            </div>
+            
+            <div class="pos-list"></div>
+            
+            <div class="yndtAtr_art">
+            	<div class="yndtAtr_head">
+                    <h2><span class="tit_icon" id="tit_icon">{dede:field.tjycrd /}</span>{dede:field.title/}</h2>
+                    <p class="yndtAtr_intro">
+                        <span>{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</span>
+                        <span>
+                        	<img src="/templets/jq/images/yndt_list.png" />
+							<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>人已读
+                        </span>
+                        <span>文章来源：北京金桥医院</span>
+                    </p>
+                </div>
+                <!--<div class="yndtAtr_a">
+                	<a href="javascript:void(0)" onclick="openZoosUrl('chatwin');">
+                    	<img src="/templets/jq/images/zjtd_zx.png" />
+                        <p>在线咨询</p>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin');">
+                    	<img src="/templets/jq/images/zjtd_gh.png" />
+                        <p>预约挂号</p>
+                    </a>
+                    <a onclick='copy()'>
+                    	<img src="/templets/jq/images/bottom_wx.png" />
+                        <p>微信咨询</p>
+                    </a>
+                </div>-->
+                <div class="yndtAtr_cont">
+                	{dede:field.body/}
+                </div>
+                
+                                
+                
+                
+           
+           
+           
+             
+<style>
+	.submitBox{
+		background: #f4f4f4;
+		padding: 3% 9%;
+		border: 0.1rem solid #CCC;
+		margin: 0 2% 10% 2%;
+	}
+	.submitTit{
+		text-align: center;
+		font-size: 1.3rem;
+	    line-height: 3rem;
+	}
+	.submitAfter{
+		text-align: center;
+		color: #969696;
+		font-size: 0.9rem;
+	}
+	.submit_name{
+		display:block;
+		margin: 3% 0;
+		text-align:center;
+	}
+	.inpBox input,.inpBox select{
+		width:100%;
+		height: 2em;
+		border: 0.1rem solid #CCC;
+		background: #FFF;
+		padding-left: 3%;
+    	box-sizing: border-box;
+		font-size: 1.1rem;
+	}
+	.inpBox{
+		width:70%;
+	}
+	.inpTit{
+		font-size:1.1rem;
+	}
+	.toSubmit{
+		background: #ddb32b;
+		color: #fff;
+		width: 30%;
+		line-height: 2rem;
+		margin: auto;
+		font-size: 1.1rem;
+		border-radius: 0.5rem;
+	}
+	@media screen and (min-width: 640px) {
+		.inpBox{
+			width:73%;
+		}
+	}
+</style>
+
+<div class="submitBox">
+	<p class="submitTit">在线预约视频评估</p>
+    <p class="submitAfter"><span style="color:red">*</span>资料审核通过后，我们会第一时间联系您，为您安排视频评估。</p>
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post" class="submitData" onSubmit="return checkForm()">
+        <input type="hidden" name="action" value="post" />
+        <input type="hidden" name="diyid" value="1" />
+        <input type="hidden" name="do" value="2" />
+        <table style="width:97%;" cellpadding="0" cellspacing="1">
+            <tr class="submit_name">
+              <td class="inpTit">宝宝姓名：</td>
+              <td class="inpBox"><input type='text' name='bbxm' id='bbxm' class='intxt' value='' />
+            </td>
+            </tr>
+            <tr class="submit_name">
+              <td class="inpTit">宝宝性别：</td>
+              <td class="inpBox">
+              	<select name="bbxb">
+                	<option value="男">男</option>
+                	<option value="女">女</option>
+                </select>
+            </td>
+            </tr>
+            <tr class="submit_name">
+              <td class="inpTit">宝宝年龄：</td>
+              <td class="inpBox"><input type='text' name='bbnl' id='bbnl' class='intxt' value='' />
+            </td>
+            </tr>
+            <tr class="submit_name">
+              <td class="inpTit">疾病症状：</td>
+              <td class="inpBox">
+                  <select name="pgzz">
+                    <option value="粗大运动评估">粗大运动评估</option>
+                	<option value="精细运动评估">精细运动评估</option>
+                    <option value="认知水平评估">认知水平评估</option>
+                    <option value="言语评估">言语评估</option>
+                    <option value="自闭症评估">自闭症评估</option>
+                	<option value="感统评估">感统评估</option>
+                  </select>
+              </td>
+            </tr>
+            <tr class="submit_name">
+              <td class="inpTit">家长姓名：</td>
+              <td class="inpBox"><input type='text' name='jzxm' id='jzxm' class='intxt' value='' />
+            </td>
+            </tr>
+            <tr class="submit_name">
+              <td class="inpTit">联系方式：</td>
+              <td class="inpBox"><input type='text' name='lxfs' id='lxfs' class='intxt' value='' />
+            </td>
+            </tr>
+            <input type="hidden" name="dede_fields" value="bbxm,text;bbxb,text;bbnl,text;pgzz,select;jzxm,text;lxfs,text" />
+            <input type="hidden" name="dede_fieldshash" value="2b10cd7cb6a272140f03be6d51d49499" />
+        </table>
+        <div align='center'>
+            <input type="submit" name="submit" value="提 交" class='toSubmit' />
+            &nbsp;
+            <input type="reset" name="reset" value="重 置" class='toSubmit' />
+        </div>
+    </form>
+</div>
+
+<script>
+	function checkForm(){
+		var form1 = document.querySelector('.submitData');
+		var movePhoneNumber = /(^1[3|5|8|4|7]\d{9}$)/.test(form1.lxfs.value);
+    	var phoneNumber = /^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/.test(form1.lxfs.value);
+		if(form1.bbxm.value == ''){
+			alert('请填写宝宝姓名!');
+			//form1.bbxm.focus();
+			return false;
+		}else if(form1.bbxb.value == ''){
+			alert('请填写宝宝性别!');
+			//form1.bbxb.focus();
+			return false;
+		}else if(form1.bbnl.value == ''){
+			alert('请填写宝宝年龄!');
+			//form1.bbnl.focus();
+			return false;
+		}else if(form1.jzxm.value == ''){
+			alert('请填写家长年龄!');
+			//form1.jzxm.focus();
+			return false;
+		}else if(!(movePhoneNumber || phoneNumber)){
+			alert('请填写正确的联系方式');
+			//form1.lxfs.focus();
+			return false;
+		}
+//		 var e = event || window.event; //firefox里的event是临时的，不是window下的全局变量
+//		 e.preventDefault ? e.preventDefault() : e.returnValue = false; //阻止浏览器默认事件
+//		 var formData = new FormData(document.querySelector(".submitData")); //生成formData
+//		 var xhr = new XMLHttpRequest();
+//		 xhr.onreadystatechange = function() {
+//		     if (xhr.readyState === 4) {
+//		         if (xhr.status === 200) {
+//		             if(xhr.responseText==="sendmail succeeded"){
+//		                 alert("提交成功！");
+//		             }else{
+//		                 alert("提交失败，请您联系客服。");
+//		             }
+//		         } else {
+//		             alert("提交失败，请您联系客服。");
+//		         }
+//		     }
+//		 }
+//		 xhr.open("post", "/sendmail.php", true);
+//		 xhr.send(formData); //发送formData
+	}
+</script>
+           
+                
+                
+                
+                
+                
+                
+                
+
+                <!-- 分享 -->
+				<script src="/swt/nativeShare.js"></script>
+                <link rel="stylesheet" href="/swt/nativeShare.css"/>
+                <div id="nativeShare"></div>
+                <script>
+                    var config = {
+                        url:'',
+                        title:'',
+                        desc:'',
+                        img:'http://3g.bjjqyy.com/swt/share.jpg',
+                        img_title:'',
+                        from:''
+                    };
+                    var share_obj = new nativeShare('nativeShare',config);
+                </script>
+            </div>
+            
+        </div>
+        
+
+		<!-- footer -->
+		{dede:include filename='public_footer.htm'/}
+        
+        <script type="text/javascript" src="/templets/jq/js/jquery-1.8.2.min.js"></script>
+        <script>
+        	document.ready = function(){
+				var icon = document.getElementById('tit_icon');
+				console.log(icon.innerText)
+				switch(icon.innerText){
+					case '原创':
+						icon.setAttribute('style','color:#08b0bd;border:1px solid #08b0bd;');
+						break;
+					case '推荐':
+						icon.setAttribute('style','color:#ff9000;border:1px solid #ff9000;');
+						break;
+					case '热点':
+						icon.setAttribute('style','color:red;border:1px solid red;');
+						break;
+				}
+			}
+        </script>
+
+		<!-- 全局调用 -->
+		<script src="/swt/callSwt.js"></script>
+
+	</body>
+
+</html>

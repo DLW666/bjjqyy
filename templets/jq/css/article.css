@@ -1,0 +1,98 @@
+
+
+
+.zjtd_article{
+	padding: 4% 3%;
+}
+
+.zjtd_article_tit{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: bold;
+	line-height: 2rem;
+	padding: 2% 0 5% 0;
+}
+
+.tit_icon{
+	font-size: 0.9rem;
+    color: #08b0bd;
+    border: 1px solid #08b0bd;
+    border-radius: 0.3rem;
+    padding: 0.5% 1%;
+    margin-right: 2%;
+}
+
+.zjtd_article_cont{
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.zjtd_article_intro{
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+	margin-bottom: 4%;
+    background: #f1f1f1;
+    padding: 2%;
+    border-radius: 0.5rem;
+}
+
+.zjtd_article_intro div:nth-child(1){
+	width: 15%;
+	border-radius: 0.4rem;
+	position:relative;
+}
+
+.zjtd_article_intro div:nth-child(2){
+	width: 80%;
+	font-size: 0.9rem;
+    line-height: 1.5rem;
+	
+}
+
+.zjtd_article_intro div:nth-child(2) p{
+	overflow: hidden;
+  	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.zjtd_article_intro div:nth-child(2) p:nth-child(1) span:nth-child(1){
+	font-size: 1rem;
+}
+.zjtd_article_intro div:nth-child(2) p span{
+	margin-right:2%;
+}
+
+.jin{
+	color:#ddb32b;
+}
+
+.zjtd_art_pos{
+	padding:1%;
+}
+.zjtd_art_pos a{
+	color:#333;
+}
+
+.threej{
+    background: #ff8c28;
+    color: #fff;
+    position: absolute;
+    width: 50% !important;
+    font-size: 0.6rem !important;
+    right: 0;
+    bottom: 0;
+    line-height: 1rem !important;
+    text-align: center;
+    border-radius: 0.4rem 0 0.4rem 0;
+}
+
+.pos-con{
+	height:0.4rem;
+	background: -webkit-linear-gradient(#e1e1e1, #fff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#e1e1e1, #fff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#e1e1e1, #fff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#e1e1e1, #fff); /* 标准的语法（必须放在最后） */
+}

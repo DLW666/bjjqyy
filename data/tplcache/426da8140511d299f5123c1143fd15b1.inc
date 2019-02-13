@@ -1,0 +1,1 @@
+<p style="display:none"><script src="[field:phpurl/]/contclick.php?view=yes&aid=[field:id/]&mid=[field:mid/]"type='text/javascript' language="javascript"></script></p>

@@ -1,0 +1,6 @@
+1.180.17.33||/plus/count_hdf.php?view=yes&aid=45&mid=|| UPDATE `@_addoninfos` SET click=click+1 WHERE aid='45' ||unusual character
+1.180.17.33||/plus/count_hdf.php?view=yes&aid=43&mid=|| UPDATE `@_addoninfos` SET click=click+1 WHERE aid='43' ||unusual character
+1.180.17.33||/plus/count_hdf.php?view=yes&aid=41&mid=|| UPDATE `@_addoninfos` SET click=click+1 WHERE aid='41' ||unusual character
+1.180.17.33||/plus/count_hdf.php?view=yes&aid=44&mid=|| UPDATE `@_addoninfos` SET click=click+1 WHERE aid='44' ||unusual character
+1.180.17.33||/plus/count_hdf.php?view=yes&aid=42&mid=|| UPDATE `@_addoninfos` SET click=click+1 WHERE aid='42' ||unusual character
+1.180.17.33||/plus/count_hdf.php?view=yes&aid=41&mid=|| UPDATE `@_addoninfos` SET click=click+1 WHERE aid='41' ||unusual character

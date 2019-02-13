@@ -1,0 +1,47 @@
+<?php
+$z[0]=Array("field","",285,304);
+$z[0][4]=array();
+$z[0][4]['name']="title";
+$z[1]=Array("global","",305,331);
+$z[1][4]=array();
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",412,464);
+$z[2][4]=array();
+$z[2][4]['name']="description";
+$z[2][4]['function']="html2text(@me)";
+$z[3]=Array("field","",533,555);
+$z[3][4]=array();
+$z[3][4]['name']="keywords";
+$z[4]=Array("include","",1082,1123);
+$z[4][4]=array();
+$z[4][4]['filename']="public_nav.htm";
+$z[5]=Array("field","",1260,1289);
+$z[5][4]=array();
+$z[5][4]['name']="typeimg";
+$z[6]=Array("field","",1401,1431);
+$z[6][4]=array();
+$z[6][4]['name']="typename";
+$z[7]=Array("arclist","\r\n            	[field:zhicheng1 /] [field:zhicheng2 /] [field:zhicheng3 /]\r\n            ",1479,1653);
+$z[7][4]=array();
+$z[7][4]['addfields']="zhicheng1,zhicheng2,zhicheng3";
+$z[7][4]['channelid']="19";
+$z[8]=Array("arclist","\r\n    <div class=\"goodat\">\r\n    	<h1><img src=\"/templets/jq/images/goddat.jpg\" />专业擅长</h1>\r\n        <p>\r\n            [field:scly /]\r\n        </p>\r\n    </div>\r\n    <div class=\"goodat\">\r\n    	<h1><img src=\"/templets/jq/images/goddat1.jpg\" />执业经历</h1>\r\n        	[field:zyjl /]\r\n            <p class=\"time\"><img src=\"/templets/jq/images/time.jpg\" />出诊时间：[field:czsj /]</p>\r\n    	<p class=\"tips\">温馨提示：为保证就诊质量，专家每次出诊，限号十名</p>\r\n        <div onclick=\"openZoosUrl('chatwin');\">\r\n        <input name=\"\" value=\"在线咨询\" class=\"zx gbutton\" type=\"button\" /><input name=\"\" value=\"预约挂号\" class=\"gh gbutton\"  type=\"button\" />\r\n        <div class=\"clear\"></div>\r\n        </div>\r\n        <div class=\"clear\"></div>\r\n    </div>\r\n    ",2155,3043);
+$z[8][4]=array();
+$z[8][4]['addfields']="scly,zyjl,czsj";
+$z[8][4]['channelid']="19";
+$z[8][4]['orderby']="pubdate";
+$z[9]=Array("channelartlist","\r\n            <div class=\"goodat\">\r\n                <h1><img src=\"/templets/jq/images/goddat2.jpg\" />{dede:field name='typename'/}</h1>\r\n                \r\n                <div class=\"reviewsBox\">\r\n                    <div class=\"reviewsBd\">\r\n                        <ul>\r\n                        	{dede:arclist orderby='pubdate'}\r\n                            <li>\r\n                                <div class=\"patientr\">\r\n                                    <a href=\"javascript:void(0)\" onclick=\"openZoosUrl('chatwin');\">\r\n                                        <dl>\r\n                                            <dt><img src=\"/templets/jq/images/partientr.jpg\" /></dt>\r\n                                            <dd><span class=\"l\">[field:title/]</span>	<span class=\"r\">[field:pubdate function='GetDateMK(@me)' /]</span></dd>\r\n                                            <dd>[field:shorttitle/]</dd>\r\n                                            <div class=\"clear\"></div>\r\n                                        </dl>\r\n                                        <div class=\"clear\"></div>\r\n                                        <p>患者主观疗效：<b>很满意</b>　　态度：<b>很满意</b> </p>\r\n                                        <p>[field:description/]</p>\r\n                                    </a>\r\n                                </div>\r\n                            </li>\r\n                            {/dede:arclist} \r\n                        </ul>\r\n                    </div>\r\n                </div>\r\n                                 \r\n            </div>\r\n            ",3120,4763);
+$z[9][4]=array();
+$z[9][4]['limit']="0,1";
+$z[10]=Array("channelartlist","\r\n    <div class=\"goodat\" id=\"getSec\">\r\n    	<h1><img src=\"/templets/jq/images/goddat3.jpg\" />{dede:field name='typename'/}</h1>\r\n        {dede:arclist row='3' orderby='rand' titlelen='18'}\r\n        <div class=\"onlinei onlineit\">\r\n        	<div class=\"btt\">\r\n            	<a href=\"javascript:void(0)\" onclick=\"openZoosUrl('chatwin');\">[field:title/]</a> \r\n                <b class=\"mimi\"></b>  \r\n                <span>共<em class=\"random1\" style=\"font-style: normal;\"></em>条对话 今天</span>\r\n            </div>\r\n            <p class=\"add\">[field:description function='cn_substr(Html2text(\"@me\").\"...\",30)'/]<span>[field:shorttitle/]</span></p>\r\n            <p class=\"gray mi_yinsi\" style=\"display:none\" >交流涉及隐私，仅医患本人可见</p>\r\n        </div>\r\n        {/dede:arclist}\r\n    </div>\r\n    ",4982,5853);
+$z[10][4]=array();
+$z[10][4]['limit']="1,1";
+$z[11]=Array("channelartlist","\r\n    <div class=\"goodat\">\r\n    	<h1><img src=\"/templets/jq/images/goddat4.jpg\" />{dede:field name='typename'/}</h1>\r\n        {dede:arclist row='3' orderby='id' titlelen='90'}\r\n        <div class=\"expert\">\r\n        	<h4><span>医学科普</span><a href=\"[field:arcurl/]\">[field:title/]</a></h4>\r\n            <p><span><b class=\"reviews\"></b>条评价 <b><script src=\"[field:phpurl/]/contclick.php?view=yes&aid=[field:id/]&mid=[field:mid/]\"type='text/javascript' language=\"javascript\"></script>  </b>人已读</span> <span class=\"r\">发表于[field:pubdate function='GetDateMK(@me)' /]</span></p>\r\n        </div>\r\n        {/dede:arclist}\r\n    </div>\r\n    ",5898,6607);
+$z[11][4]=array();
+$z[11][4]['limit']="2,1";
+$z[12]=Array("arclist","\r\n        [field:ysjy /]\r\n        ",6709,6804);
+$z[12][4]=array();
+$z[12][4]['addfields']="ysjy";
+$z[12][4]['channelid']="19";
+
+?>

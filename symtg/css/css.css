@@ -1,0 +1,48 @@
+@charset "utf-8";
+body { background: #f2f2f2 }
+.bg { background: #fff }
+.zjtop { display: -moz-box; display: -webkit-box; display: box; background: url(../images/top.jpg); line-height: 2.2rem }
+.zjtop a { display: block; color: #014ba2; padding: 1.5rem 0; }
+.zjtop a:nth-of-type(1) { width: 13.59%; text-align: right; font-size: 1.4rem }
+.zjtop a:nth-of-type(2) { -moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; text-align: center; font-weight: bold; font-size: 1.6rem }
+.zjtop a:nth-of-type(3) { width: 11.25%; background: url(../images/tel.png) no-repeat 0 center/69.44% auto; }
+.zjask { background: #f2f2f2; text-align: center; padding: 0.5rem 0; margin-bottom: 1rem }
+.zjask span { display: inline-block; background: #c2c2c2; border-radius: 10px; font-size: 1.3rem; padding: 0.3rem 0.5rem; color: #fff }
+.zjcon { border-bottom: 1px solid #d6d6d6; padding-bottom: 0.6rem; margin-bottom: 0.6rem }
+.zjcon dl { display: -moz-box; display: -webkit-box; display: box; margin-left: 1.875% }
+.zjcon dl dt { width: 37.7%; margin-right: 1.4%; }
+.zjcon dl dd { display: block; -moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; padding-top: 0.2rem }
+.zjcon dl dd h3 { display: block; white-space: nowrap }
+.zjcon dl dd h3 span { display: inline-block; padding-right: 0.6rem; background: url(../images/img1.jpg) no-repeat right 0/auto 100%; font-size: 2.2rem; color: #1383af; margin-right: 0.4rem; line-height: 2.2rem }
+.zjcon dl dd h3 i { display: inline-block; line-height: 1.4rem; padding-top: 0.8rem; font-size: 1.3rem; font-style: normal }
+.zjcon dl dd h5 { display: block; font-size: 1.1rem; padding: 0.5rem 0 0.2rem }
+.zjcon dl dd h5 span { display: inline-block; background: #ff5260; color: #fff; border-radius: 0.3rem; padding: 0 0.1rem; margin-left: 0.1rem }
+.zjcon dl dd h4 { display: block; font-size: 1.4rem; color: #1383af; margin:1% 0; }
+.zjcon dl dd h4 span { color: #ff5260; font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size:2rem; }
+.zjcon dl dd p { display: block; font-size: 1.3rem; padding: 0.2rem 1rem 0.2rem 0 }
+.zjcon dl dd a { font-size: 1.4rem; font-weight: bold; white-space: nowrap }
+.zjcon dl dd a span { color: #ff5260 }
+.tw1 { text-align: center; font-size: 1.5rem; line-height: 2.2rem; margin: 0 12.5% 1.1rem; display: -moz-box; display: -webkit-box; display: box; }
+.tw1 span { display: block; width: 10.625% }
+.tw1 span:nth-of-type(2) { margin-left: 2.1rem; width: 22.9% }
+.tw1 i { display: block; font-style: normal; -moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; padding-left: 0.5rem; }
+.tw2 { display: -moz-box; display: -webkit-box; display: box; white-space: nowrap; font-size: 1.35rem; color: #b6b6b6; margin-left: 2.2%; padding-bottom: 1.2rem }
+.tw2 span { display: block; }
+.tw2 i { display: block; width: 18.75%; margin: 0.2rem 0; background: #ff5260; }
+.tw2 em { display: block; font-style: normal; padding-left: 0.2rem }
+.tw2 span:nth-of-type(2) { margin-left: 1.6% }
+.chatbox { padding-top: 0.9rem; padding-bottom: 10rem; display: none }
+.chatbox dl { margin: 0 1.875% 0.8rem 2.8125%; display: -moz-box; display: -webkit-box; display: box; }
+.chatbox dl dt { width: 14.75%; padding-top: 1.5rem; margin-right: 2.3% }
+.chatbox dl dd { -moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; }
+.chatbox dl dd .time { text-align: center; line-height: 1.5rem; color: #5c5c5c }
+.chatbox dl dd a { display: block; padding: 1rem 4% 1rem; font-size: 1.15rem; color: #1c1b18; border: 1px solid #e2e2e2; border-radius: 10px; background: #fff; margin-right: 7%; box-shadow: 2px 2px 5px #dcdcdc }
+.foot { position: fixed; bottom: 0; width: 100%; max-width: 640px; -moz-box-shadow: 0 -2px 3px #c2c2c2; -webkit-box-shadow: 0 -2px 3px #c2c2c2; box-shadow: 0 -2px 3px #c2c2c2; background: #fff; }
+.foot .con { padding: 0.5rem 2.5%; display: -moz-box; display: -webkit-box; display: box; }
+.foot .con a { display: block; }
+.foot .con a:nth-of-type(1) { width: 10.53%; background: url(../images/img3.jpg) no-repeat 0 center/auto 100%; }
+.foot .con a:nth-of-type(2) { -moz-box-flex: 1; -webkit-box-flex: 1; box-flex: 1; border: 1px solid #9b9b9b; margin: 0 2%; font-size: 1.2rem; line-height: 2.9rem; color: #afafaf; text-indent: 0.3rem; }
+.foot .con a:nth-of-type(3) { width: 15.46%; line-height: 3rem; font-size: 1.2rem; color: #fff; border-radius: 0.3rem; text-align: center; background: #ffc000; }
+.hdbox .zjcon { border-bottom: none; margin-bottom: 0 }
+#LR_YaoDiv{ display:none !important;}
+#swtColse,#LRdiv0,#LRfloater0{ display:none !important;}

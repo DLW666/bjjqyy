@@ -1,0 +1,2 @@
+INSERT INTO `dede_search_keywords` VALUES('1','Å®ÐÔ¹¬¾±Ñ×','Å®ÐÔ¹¬¾±Ñ×','3','0','1544071930','0','0');
+INSERT INTO `dede_search_keywords` VALUES('2','Å®ÐÔ¹¬¾±·Ê´óµÄÒò','Å®ÐÔ¹¬¾±·Ê´óµÄÒò','3','0','1544071930','0','0');

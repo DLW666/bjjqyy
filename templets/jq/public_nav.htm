@@ -1,0 +1,39 @@
+
+
+<style>
+	.nav{
+	background: #ddb32b;
+	display: flex;
+	text-align: center;
+	}
+	.nav a{
+		color: #fff;
+	}
+	.nav li{
+		width: 20%;
+		border-right: 1px solid #fff;
+		font-size: 1rem;
+		line-height: 2.5rem;
+	}
+	.nav li:last-child{
+		border-right: none;
+	}
+</style>
+
+<ul class="nav">
+    <li>
+        <a href="/">首页</a>
+    </li>
+    <li>
+        {dede:type typeid='65'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+    </li>
+    <li>
+        {dede:type typeid='1'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+    </li>
+    <li>
+        {dede:type typeid='62'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+    </li>
+    <li>
+        {dede:type typeid='3'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+    </li>
+</ul>
