@@ -173,7 +173,7 @@
 	margin-right: 1%;
 }
 /*.zjtd_des li{
-	list-style: inside url(/templets/jq/images/dian.png);
+	list-style: inside url(/bjjqyy/templets/jq/images/dian.png);
 }*/
 .zjtd_des li img{
 	display: inline;
@@ -241,7 +241,7 @@
 	align-items: center;
     color: #fff;
 	line-height: 2.9rem;
-	background:url('/templets/jq/images/zjtd_time.jpg') no-repeat;
+	background:url('/bjjqyy/templets/jq/images/zjtd_time.jpg') no-repeat;
 	background-size: 100%;
 	font-size:0.9rem;
 }
@@ -390,7 +390,7 @@
 }
 .disease_des{
 	color:#2997c2;
-	background: url(/templets/jq/images/disease_bg.jpg) no-repeat;
+	background: url(/bjjqyy/templets/jq/images/disease_bg.jpg) no-repeat;
 	background-size: 100%;
 	padding: 3% 4% 10% 6%;
 	font-size: 0.9rem;
