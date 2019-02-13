@@ -68,8 +68,8 @@ function closeCenter(){
 	swt_center_box.style.display = 'none';
 	//document.removeEventListener("touchmove", defaultEvent);
 	
-	//setTimeout(afterLoading,20000)
-	setTimeout(afterLoading,20000)
+	//setTimeout(afterLoading,10000)
+	setTimeout(afterLoading,10000)
 }
 
 
