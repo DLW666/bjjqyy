@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//一
+			let str = "I? love ?? the ?great ? ?wall in ?beijing";
+			console.log(str_reg(str));
+			function str_reg(str){
+				const regArr = str.match(/[\?][a-z]/g); //匹配'?'+字母
+				for(let item of regArr){
+					let upper = item[1].toUpperCase(); //'?'号后的转大写
+					str = str.replace(item, upper); //转大写后的字母替换进去
+				}
+				str = str.replace(/\?/g, ""); //去除'?'
+				str = str.replace(/\s\s*/g, ' '); //多个空白替换成一个空白
+				return str;
+			}
+			
+			//二
+			console.log(arr_add([]));
+			function arr_add(arr){
+				if(arr[arr.length-1] !== 100){ //数组最后一个不是100
+					let lastNum = arr[arr.length-1]; //数组最后一条值
+					let newNum = arr.length === 0 ? 0 : lastNum + 1; //arr为空数组时，第一条添加0
+					arr.push(newNum);
+					return arr_add(arr);
+				}else{
+					return arr;
+				}
+			}
+			
+			//三
+			let fn_a = () => {
+				console.log("I'm function AAA");
+			}
+			let fn_b = () => {
+				console.log("I'm function BBB");
+			}
+			let fn_c = () => {
+				console.log("I'm function CCC");
+			}
+			let fnArr = [
+				{ timeout: 1000, fn: fn_a },
+				{ timeout: 2000, fn: fn_b },
+				{ timeout: 3000, fn: fn_c },
+			]
+			timeScheduler(fnArr, true, 5000);
+			/**
+			 * @param {Array} fnArr - 事件数组
+			 * @param {Boolean} [isLoop = true] - 是否是循环调度
+			 * @param {Number} [loopTime = 5000] - 循环调度间隔
+			 */
+			function timeScheduler(fnArr, isLoop = true, loopTime = 5000){
+				//循环调度事件
+				let loopFn = () => {
+					for(let item of fnArr){
+						setTimeout(item.fn, item.timeout);
+					}
+				}
+				//顺序调度事件
+				let orderFn = i => {
+					setTimeout( () => {
+						fnArr[i].fn();
+						i++; //下一个
+						if(i < fnArr.length){
+							orderFn(i);
+						}
+					}, fnArr[i].timeout);
+				}
+				if(isLoop){ //循环
+					loopFn();
+					setInterval(loopFn, loopTime);
+				}else{ //顺序
+					orderFn(0);
+				}
+			}
+			
+		</script>
+	</body>
+</html>
